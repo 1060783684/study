@@ -26,5 +26,12 @@ public class TestTask {
         * 调用后会从Timer的队列中被删除
         */
         task.cancel();
+
+        try {
+            Thread.sleep(10*1000);
+            testTimer.cancel();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
